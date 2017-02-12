@@ -5,101 +5,48 @@
 <head>
     <meta http-equiv="Content-Type" name="referrer" content="origin" />
     <title>Super Simple Call Recorder</title>
-    <style type="text/css">
-    .tk-myriad-pro {
-        font-family: "myriad-pro", sans-serif;
-    }
     
-    .tk-proxima-nova-soft {
-        font-family: "proxima-nova-soft", sans-serif;
-    }
-    
-    .tk-source-code-pro {
-        font-family: "source-code-pro", sans-serif;
-    }
-    </style>
-    <style type="text/css">
-    @font-face {
-        font-family: myriad-pro;
-        src: url(https://use.typekit.net/af/f15dfe/00000000000000000001709e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&token=3Xl3Ug2boH7GVBeibG8DI1Ra4u%2Ftpo%2FViNdW3pm%2Bt4iAXc9teYE7xUTqyXxaqy%2BPFNnQnDJ8Lo7t8YNOxWBAE6Z%2BwuUCIfLmEYlRfLPaVsumjQFKBKntlM6s33oiQuhitTKJJ4zcbSyxdCAsTuJ38A24TBxWI%2B49lAysRiw8353qi0iB5hIAgbj2ikLmybHoaJNfZAQesC%2BUC35GI2aplEiAVd%2Bzi7DYGDBM%2FFArNj1g0G0H%2BvmOPEV7qKbLqdyym3LM8IqVb9bbFkf30NXNNA%3D%3D) format("woff2"), url(https://use.typekit.net/af/f15dfe/00000000000000000001709e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&token=3Xl3Ug2boH7GVBeibG8DI1Ra4u%2Ftpo%2FViNdW3pm%2Bt4iAXc9teYE7xUTqyXxaqy%2BPFNnQnDJ8Lo7t8YNOxWBAE6Z%2BwuUCIfLmEYlRfLPaVsumjQFKBKntlM6s33oiQuhitTKJJ4zcbSyxdCAsTuJ38A24TBxWI%2B49lAysRiw8353qi0iB5hIAgbj2ikLmybHoaJNfZAQesC%2BUC35GI2aplEiAVd%2Bzi7DYGDBM%2FFArNj1g0G0H%2BvmOPEV7qKbLqdyym3LM8IqVb9bbFkf30NXNNA%3D%3D) format("woff"), url(https://use.typekit.net/af/f15dfe/00000000000000000001709e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&token=3Xl3Ug2boH7GVBeibG8DI1Ra4u%2Ftpo%2FViNdW3pm%2Bt4iAXc9teYE7xUTqyXxaqy%2BPFNnQnDJ8Lo7t8YNOxWBAE6Z%2BwuUCIfLmEYlRfLPaVsumjQFKBKntlM6s33oiQuhitTKJJ4zcbSyxdCAsTuJ38A24TBxWI%2B49lAysRiw8353qi0iB5hIAgbj2ikLmybHoaJNfZAQesC%2BUC35GI2aplEiAVd%2Bzi7DYGDBM%2FFArNj1g0G0H%2BvmOPEV7qKbLqdyym3LM8IqVb9bbFkf30NXNNA%3D%3D) format("opentype");
-        font-weight: 700;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: proxima-nova-soft;
-        src: url(https://use.typekit.net/af/b5823a/00000000000000000001743c/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&token=3Xl3Ug2boH7GVBeibG8DI1Ra4u%2Ftpo%2FViNdW3pm%2Bt4iAXc9teYE7xUTqyXxaqy%2BPFNnQnDJ8Lo7t8YNOxWBAE6Z%2BwuUCIfLmEYlRfLPaVsumjQFKBKntlM6s33oiQuhitTKJJ4zcbSyxdCAsTuJ38A24TBxWI%2B49lAysRiw8353qi0iB5hIAgbj2ikLmybHoaJNfZAQesC%2BUC35GI2aplEiAVd%2Bzi7DYGDBM%2FFArNj1g0G0H%2BvmOPEV7qKbLqdyym3LM8IqVb9bbFkf30NXNNA%3D%3D) format("woff2"), url(https://use.typekit.net/af/b5823a/00000000000000000001743c/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&token=3Xl3Ug2boH7GVBeibG8DI1Ra4u%2Ftpo%2FViNdW3pm%2Bt4iAXc9teYE7xUTqyXxaqy%2BPFNnQnDJ8Lo7t8YNOxWBAE6Z%2BwuUCIfLmEYlRfLPaVsumjQFKBKntlM6s33oiQuhitTKJJ4zcbSyxdCAsTuJ38A24TBxWI%2B49lAysRiw8353qi0iB5hIAgbj2ikLmybHoaJNfZAQesC%2BUC35GI2aplEiAVd%2Bzi7DYGDBM%2FFArNj1g0G0H%2BvmOPEV7qKbLqdyym3LM8IqVb9bbFkf30NXNNA%3D%3D) format("woff"), url(https://use.typekit.net/af/b5823a/00000000000000000001743c/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&token=3Xl3Ug2boH7GVBeibG8DI1Ra4u%2Ftpo%2FViNdW3pm%2Bt4iAXc9teYE7xUTqyXxaqy%2BPFNnQnDJ8Lo7t8YNOxWBAE6Z%2BwuUCIfLmEYlRfLPaVsumjQFKBKntlM6s33oiQuhitTKJJ4zcbSyxdCAsTuJ38A24TBxWI%2B49lAysRiw8353qi0iB5hIAgbj2ikLmybHoaJNfZAQesC%2BUC35GI2aplEiAVd%2Bzi7DYGDBM%2FFArNj1g0G0H%2BvmOPEV7qKbLqdyym3LM8IqVb9bbFkf30NXNNA%3D%3D) format("opentype");
-        font-weight: 400;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: source-code-pro;
-        src: url(https://use.typekit.net/af/269954/0000000000000000000179d5/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&token=3Xl3Ug2boH7GVBeibG8DI1Ra4u%2Ftpo%2FViNdW3pm%2Bt4iAXc9teYE7xUTqyXxaqy%2BPFNnQnDJ8Lo7t8YNOxWBAE6Z%2BwuUCIfLmEYlRfLPaVsumjQFKBKntlM6s33oiQuhitTKJJ4zcbSyxdCAsTuJ38A24TBxWI%2B49lAysRiw8353qi0iB5hIAgbj2ikLmybHoaJNfZAQesC%2BUC35GI2aplEiAVd%2Bzi7DYGDBM%2FFArNj1g0G0H%2BvmOPEV7qKbLqdyym3LM8IqVb9bbFkf30NXNNA%3D%3D) format("woff2"), url(https://use.typekit.net/af/269954/0000000000000000000179d5/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&token=3Xl3Ug2boH7GVBeibG8DI1Ra4u%2Ftpo%2FViNdW3pm%2Bt4iAXc9teYE7xUTqyXxaqy%2BPFNnQnDJ8Lo7t8YNOxWBAE6Z%2BwuUCIfLmEYlRfLPaVsumjQFKBKntlM6s33oiQuhitTKJJ4zcbSyxdCAsTuJ38A24TBxWI%2B49lAysRiw8353qi0iB5hIAgbj2ikLmybHoaJNfZAQesC%2BUC35GI2aplEiAVd%2Bzi7DYGDBM%2FFArNj1g0G0H%2BvmOPEV7qKbLqdyym3LM8IqVb9bbFkf30NXNNA%3D%3D) format("woff"), url(https://use.typekit.net/af/269954/0000000000000000000179d5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&token=3Xl3Ug2boH7GVBeibG8DI1Ra4u%2Ftpo%2FViNdW3pm%2Bt4iAXc9teYE7xUTqyXxaqy%2BPFNnQnDJ8Lo7t8YNOxWBAE6Z%2BwuUCIfLmEYlRfLPaVsumjQFKBKntlM6s33oiQuhitTKJJ4zcbSyxdCAsTuJ38A24TBxWI%2B49lAysRiw8353qi0iB5hIAgbj2ikLmybHoaJNfZAQesC%2BUC35GI2aplEiAVd%2Bzi7DYGDBM%2FFArNj1g0G0H%2BvmOPEV7qKbLqdyym3LM8IqVb9bbFkf30NXNNA%3D%3D) format("opentype");
-        font-weight: 700;
-        font-style: normal;
-    }
-    </style>
-    <script>
-    try {
-        Typekit.load();
-    } catch (e) {}
-    </script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="initial-scale=1">
-    <link rel="stylesheet" href="./Formspree_files/font-awesome.min.css">
 </head>
 
 <body>
-    <div class="row section">
-        <div class="container narrow block">
-            <div class="col-1-1">
-                <h1>Super Simple Call Recorder</h1>
-                <h3 class="light">Record phone calls without downloading or signing up for anything</h3>
-            </div>
-        </div>
-        <div class="container narrow block">
-            <div class="col-1-1">
-                <ol>
-                    <h2><li>Call <a href="tel:+1-555-555-1212">555-555-1212</a>,</li></h2>
-                    <h2><li>Dial the outbound phone number,</li></h2>
-                    <h2><li>Hang up and we'll text you the recording</li></h2>
-                    <div class="hint">(remember not to <a href="https://www.rcfp.org/reporters-recording-guide/tape-recording-laws-glance">break the law!)</a></div>
-                </ol>
-                <br>
-            </div>
-        </div>
-        
-        <div class="sectionbreak"></div>
-        
-        <div class="row section">
-            <div class="container narrow block">
-                <div class="col-1-2">
-                    <h3>Free</h3>
-                    <ul>
-                        <li>No downloads, no registration</li>
-                        <li>5 hours of recordings</li>
-                        <li>Recordings deleted after 30 days</li>
-                        <li>Blocked caller ID so people can't call you back</li>
-                    </ul>
-                </div>
-                <div class="col-1-2">
-                    <h3>Pro</h3>
-                    <ul>
-                        <li>$10/mo, but only months that you actually use it</li>
-                        <li>Private phone # so you can leave caller ID and record inbound calls</li>
-                        <li>Unlimited recordings</li>
-                        <li>Get recordings via email so you can use landline / work phones</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="container narrow block">
-                <div class="col-1-1">
-                    <form method="POST" action="http://formspree.io/jake.s.solo+sscr@gmail.com">
-                        <h4><label for="contact">Pro doesn't exist yet but I'll let you know...</label></h4>
-                        <span class="hint">(this is not a newsletter, only one message)</span>
-                        <input type="text" name="contact" placeholder="Email or phone number">
-                        <button type="submit">Let me know</button>
-                    </form>
-                </div>
-            </div>
+<!-- Title -->
+<div class="container">
+    <h1>Super Simple Call Recorder</h1>
+    <h3 class="light">Record phone calls without downloading or signing up for anything</h3>
+</div>
+
+<!-- How to -->
+<div class="container">
+    <ol>
+        <h2><li>Call <a href="tel:+1-415-237-6653">(415) 237-6653</a>,</li></h2>
+        <h2><li>Dial the outbound phone number,</li></h2>
+        <h2><li>Get a text message with the recording URL</li></h2>
+        <div class="hint">(remember not to <a href="https://www.rcfp.org/reporters-recording-guide/tape-recording-laws-glance">break the law!)</a></div>
+    </ol>
+    <br>
+</div>
+
+<div class="sectionbreak"></div>
+
+<!-- Features -->
+<div class="container">
+    <h3>Free</h3>
+    <ul>
+        <li>No downloads, no registration</li>
+        <li>5 hours of recordings</li>
+        <li>Recordings deleted after 30 days</li>
+        <li>People cannot call you back (good and bad...)</li>
+    </ul>
+    <h3><a href="mailto:?subject=Super Simple Call Recorder Pro&body=Let me know when it's ready! I would use it for: %0A%0AThe most important features to me are: ">Let me know</a> if you want a Pro version:</h3>
+    <ul>
+        <li>Unlimited recordings</li>
+        <li>Get recordings via email so you can use landline phones</li>
+        <li>Private phone # so you can leave caller ID and record inbound calls</li>
+        <li>$10/mo, but only months that you actually use it</li>
+    </ul>
+</div>
+
+</body>
+</html>
