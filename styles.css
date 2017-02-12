@@ -16,7 +16,7 @@ body {
 .hint {
   font-size: .9em;
   padding: 0px;
-  margin: 0px;
+  margin: -10px 0px 0px 0px;
   line-height: 0px;
   color: gray;
 }
